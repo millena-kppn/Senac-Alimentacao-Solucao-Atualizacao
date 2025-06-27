@@ -20,7 +20,7 @@ public class ComandaDBContext:DbContext//banco de dados representado no cSharp
         // string de conexão com o banco de dados
         var conexao = "Server=localhost;Database=SenacAlimentacao;User=root;Password=";
         //configuração do banco de dados MySQL, conf do provedor de banco de dados
-        optionsBuilder.UseMySql(conexao, ServerVersion.AutoDetect(conexao));
+        optionsBuilder.UseMySql(conexao, ServerVersion.AutoDetect(conexao)); //LINHA COM ERRO
         //configuração do banco de dados
         base.OnConfiguring(optionsBuilder);
 
