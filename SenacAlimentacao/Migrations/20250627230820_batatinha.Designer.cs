@@ -11,8 +11,8 @@ using SenacAlimentacao;
 namespace SenacAlimentacao.Migrations
 {
     [DbContext(typeof(ComandaDBContext))]
-    [Migration("20250613004607_v1")]
-    partial class v1
+    [Migration("20250627230820_batatinha")]
+    partial class batatinha
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,9 +36,8 @@ namespace SenacAlimentacao.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("PossuiPreparo")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<bool>("PossuiPreparo")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<decimal>("Preco")
                         .HasColumnType("decimal(65,30)");

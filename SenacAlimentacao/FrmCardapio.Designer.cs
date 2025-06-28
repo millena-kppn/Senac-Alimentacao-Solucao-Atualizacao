@@ -63,6 +63,7 @@
             btnItens.TabIndex = 3;
             btnItens.Text = "+ Itens";
             btnItens.UseVisualStyleBackColor = false;
+            btnItens.Click += btnItens_Click;
             // 
             // btnEditar
             // 
@@ -73,6 +74,7 @@
             btnEditar.TabIndex = 2;
             btnEditar.Text = " * Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 

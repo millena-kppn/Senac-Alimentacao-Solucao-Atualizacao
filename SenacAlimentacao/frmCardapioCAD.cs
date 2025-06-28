@@ -16,7 +16,7 @@ namespace SenacAlimentacao
         {
             InitializeComponent();
         }
-        private void btnSalvar_Click()
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
             //conectar
             using (var banco = new ComandaDBContext())
@@ -38,6 +38,8 @@ namespace SenacAlimentacao
                 banco.CardapioItens.Add(cardapioItem);//oq esta em parenteses e o nome da var criada logo em cima
                 banco.SaveChanges(); //salva as alterações no banco de dados
             }
+            MessageBox.Show("Item do cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close(); //fecha o formulário após salvar
 
         }
     }

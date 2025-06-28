@@ -96,7 +96,7 @@
             btnSalvar.TabIndex = 7;
             btnSalvar.Text = " * Salvar";
             btnSalvar.UseVisualStyleBackColor = false;
-            //btnSalvar.Click += btnSalvar_Click;
+            btnSalvar.Click += this.btnSalvar_Click;
             // 
             // groupBoxCardapio
             // 
