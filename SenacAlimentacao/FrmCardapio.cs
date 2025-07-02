@@ -28,9 +28,15 @@ namespace SenacAlimentacao
             using (var bd = new ComandaDBContext()) // instância do banco de dados ComandaDBContext
             {
                 //consultar a tabela CardapioItem 
-                var cardapios = bd.CardapioItens.ToList(); //busca todos os itens do cardápio
+                var cardapios = bd.CardapioItens.AsQueryable(); //busca todos os itens do cardápio
                                                            //popular o grid com os itens do cardápio
-                dataGridView1.DataSource = cardapios; //atribui a lista de itens do cardápio ao DataGridView
+                if(!string.IsNullOrEmpty(caixaTxtPesquisar.Text))
+                {
+                    //se o campo de pesquisa não estiver vazio, filtra os itens do cardápio pelo título
+                    cardapios = cardapios.Where(c => c.Titulo.Contains(caixaTxtPesquisar.Text) || c.Descricao.Contains(caixaTxtPesquisar.Text));
+                }
+                //atribui a lista de itens do cardápio ao DataGridView
+                dataGridView1.DataSource = cardapios.ToList(); //atribui a lista de itens do cardápio ao DataGridView
 
             }
         }
@@ -38,11 +44,23 @@ namespace SenacAlimentacao
         private void btnItens_Click(object sender, EventArgs e)
         {
             new frmCardapioCAD().ShowDialog(); //abre o formulário de cadastro de itens do cardápio
+            BuscarCardapio(); //atualiza a lista de itens do cardápio após o cadastro
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnSair_Click(object sender, EventArgs e)
         {
+            this.Close(); //fecha o formulário atual
+        }
 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            this.Close(); //fecha o formulário atual
+        }
+
+        private void caixaTxtPesquisar_TextChanged(object sender, EventArgs e)
+        {
+            //chamar o método de busca com o texto digitado 
+            BuscarCardapio();
         }
     }
 }

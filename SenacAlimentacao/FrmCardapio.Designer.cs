@@ -74,7 +74,6 @@
             btnEditar.TabIndex = 2;
             btnEditar.Text = " * Editar";
             btnEditar.UseVisualStyleBackColor = false;
-            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
@@ -83,8 +82,9 @@
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(128, 45);
             btnExcluir.TabIndex = 1;
-            btnExcluir.Text = "x Excluir";
+            btnExcluir.Text = "x Cancelar";
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // dataGridView1
             // 
@@ -112,6 +112,7 @@
             caixaTxtPesquisar.Name = "caixaTxtPesquisar";
             caixaTxtPesquisar.Size = new Size(510, 31);
             caixaTxtPesquisar.TabIndex = 4;
+            caixaTxtPesquisar.TextChanged += caixaTxtPesquisar_TextChanged;
             // 
             // btnSair
             // 
@@ -123,6 +124,7 @@
             btnSair.TabIndex = 4;
             btnSair.Text = "X";
             btnSair.UseVisualStyleBackColor = false;
+            btnSair.Click += btnSair_Click;
             // 
             // panel1
             // 
