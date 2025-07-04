@@ -60,5 +60,11 @@ namespace SenacAlimentacao
             var frmUsuario = new FrmUsuario();
             frmUsuario.ShowDialog();
         }
+
+        private void btnMesa_Click(object sender, EventArgs e)
+        {
+            var frmMesa = new FrmMesa();// cria uma instância do formulário de mesa onde posso chamar 
+            frmMesa.ShowDialog();// exibe o formulário de mesa em estilo modal
+        }
     }
 }

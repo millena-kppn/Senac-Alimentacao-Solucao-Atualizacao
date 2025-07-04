@@ -36,11 +36,13 @@
             btnFecharOpcoes = new Button();
             btnMinimizarOpcoes = new Button();
             lblMensagem = new Label();
+            btnMesa = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnMesa);
             groupBox1.Controls.Add(btnUsuarios);
             groupBox1.Controls.Add(btnPedidoCozinha);
             groupBox1.Controls.Add(btnComanda);
@@ -49,7 +51,7 @@
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(12, 71);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 312);
+            groupBox1.Size = new Size(776, 429);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Escolha seu serviço";
@@ -160,6 +162,23 @@
             lblMensagem.TabIndex = 6;
             lblMensagem.Text = "lblMensagem";
             // 
+            // btnMesa
+            // 
+            btnMesa.BackColor = Color.Silver;
+            btnMesa.FlatAppearance.BorderSize = 0;
+            btnMesa.FlatAppearance.MouseDownBackColor = Color.FromArgb(64, 64, 64);
+            btnMesa.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnMesa.FlatStyle = FlatStyle.Flat;
+            btnMesa.Font = new Font("Segoe UI", 16F);
+            btnMesa.ForeColor = Color.Black;
+            btnMesa.Location = new Point(282, 284);
+            btnMesa.Name = "btnMesa";
+            btnMesa.Size = new Size(220, 98);
+            btnMesa.TabIndex = 1;
+            btnMesa.Text = "Mesa";
+            btnMesa.UseVisualStyleBackColor = false;
+            btnMesa.Click += btnMesa_Click;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -189,5 +208,6 @@
         private Button btnFecharOpcoes;
         private Button btnMinimizarOpcoes;
         private Label lblMensagem;
+        private Button btnMesa;
     }
 }

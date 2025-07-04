@@ -19,7 +19,7 @@ namespace SenacAlimentacao
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             //conectar
-            using (var banco = new ComandaDBContext())
+            using (var banco = new ComandaDBContext())// ComandaDBContext é a classe que representa o banco de dados
             {
                 //captar os dados da tela 
                 string titulo = textTitulo.Text;
