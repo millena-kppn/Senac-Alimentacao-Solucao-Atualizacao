@@ -16,6 +16,10 @@ namespace SenacAlimentacao
         {
             InitializeComponent();
         }
+        public frmCardapioCAD(CardapioItem cardapioItem)
+        {
+            InitializeComponent();
+        }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             //conectar
@@ -41,6 +45,11 @@ namespace SenacAlimentacao
             MessageBox.Show("Item do cardápio salvo com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close(); //fecha o formulário após salvar
 
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close(); //fecha o formulário
         }
     }
 }

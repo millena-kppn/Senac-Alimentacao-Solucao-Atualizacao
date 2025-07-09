@@ -74,6 +74,7 @@
             btnEditar.TabIndex = 2;
             btnEditar.Text = " * Editar";
             btnEditar.UseVisualStyleBackColor = false;
+            btnEditar.Click += btnEditar_Click;
             // 
             // btnExcluir
             // 
@@ -94,6 +95,7 @@
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.Size = new Size(722, 268);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // labelPesquisar
             // 
