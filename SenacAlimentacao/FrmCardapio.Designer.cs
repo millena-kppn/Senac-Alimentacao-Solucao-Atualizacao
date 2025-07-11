@@ -83,7 +83,7 @@
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(128, 45);
             btnExcluir.TabIndex = 1;
-            btnExcluir.Text = "x Cancelar";
+            btnExcluir.Text = "x Excluir";
             btnExcluir.UseVisualStyleBackColor = false;
             btnExcluir.Click += btnExcluir_Click;
             // 

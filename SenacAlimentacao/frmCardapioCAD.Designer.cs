@@ -110,7 +110,7 @@
             groupBoxCardapio.Controls.Add(textTitulo);
             groupBoxCardapio.Location = new Point(2, 50);
             groupBoxCardapio.Name = "groupBoxCardapio";
-            groupBoxCardapio.Size = new Size(786, 359);
+            groupBoxCardapio.Size = new Size(786, 350);
             groupBoxCardapio.TabIndex = 8;
             groupBoxCardapio.TabStop = false;
             groupBoxCardapio.Text = "Cárdapio";
@@ -118,7 +118,7 @@
             // checkBoxPossuiPreparo
             // 
             checkBoxPossuiPreparo.AutoSize = true;
-            checkBoxPossuiPreparo.Location = new Point(36, 330);
+            checkBoxPossuiPreparo.Location = new Point(36, 321);
             checkBoxPossuiPreparo.Name = "checkBoxPossuiPreparo";
             checkBoxPossuiPreparo.Size = new Size(164, 29);
             checkBoxPossuiPreparo.TabIndex = 9;
