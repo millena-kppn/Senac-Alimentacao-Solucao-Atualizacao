@@ -110,9 +110,9 @@
             // 
             // caixaTxtPesquisar
             // 
-            caixaTxtPesquisar.Location = new Point(139, 6);
+            caixaTxtPesquisar.Location = new Point(104, 6);
             caixaTxtPesquisar.Name = "caixaTxtPesquisar";
-            caixaTxtPesquisar.Size = new Size(510, 31);
+            caixaTxtPesquisar.Size = new Size(642, 31);
             caixaTxtPesquisar.TabIndex = 4;
             caixaTxtPesquisar.TextChanged += caixaTxtPesquisar_TextChanged;
             // 

@@ -16,10 +16,13 @@ namespace SenacAlimentacao
         {
             InitializeComponent();
         }
-
         private void btnSairMenuUsuario_Click(object sender, EventArgs e)
         {
             this.Close();// Fecha o formulário atual
+        }
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            new FrmUsuariosCAD().ShowDialog();
         }
     }
 }

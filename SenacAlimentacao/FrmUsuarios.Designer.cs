@@ -29,27 +29,36 @@
         private void InitializeComponent()
         {
             panelUsuario = new Panel();
+            textBoxUsuarioPesquisar = new TextBox();
             labelUsuario = new Label();
             btnSairMenuUsuario = new Button();
             dataGridViewUsuarios = new DataGridView();
-            textBoxUsuarioPesquisar = new TextBox();
-            labelPesquisarUsuario = new Label();
             btnExcluir = new Button();
             btnEditar = new Button();
             btnAdicionar = new Button();
+            groupBoxUsuario = new GroupBox();
             panelUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).BeginInit();
+            groupBoxUsuario.SuspendLayout();
             SuspendLayout();
             // 
             // panelUsuario
             // 
             panelUsuario.BackColor = Color.Black;
+            panelUsuario.Controls.Add(textBoxUsuarioPesquisar);
             panelUsuario.Controls.Add(labelUsuario);
             panelUsuario.Controls.Add(btnSairMenuUsuario);
             panelUsuario.Location = new Point(0, 0);
             panelUsuario.Name = "panelUsuario";
             panelUsuario.Size = new Size(806, 48);
             panelUsuario.TabIndex = 7;
+            // 
+            // textBoxUsuarioPesquisar
+            // 
+            textBoxUsuarioPesquisar.Location = new Point(106, 7);
+            textBoxUsuarioPesquisar.Name = "textBoxUsuarioPesquisar";
+            textBoxUsuarioPesquisar.Size = new Size(642, 31);
+            textBoxUsuarioPesquisar.TabIndex = 9;
             // 
             // labelUsuario
             // 
@@ -58,9 +67,9 @@
             labelUsuario.ForeColor = Color.White;
             labelUsuario.Location = new Point(14, 10);
             labelUsuario.Name = "labelUsuario";
-            labelUsuario.Size = new Size(122, 25);
+            labelUsuario.Size = new Size(86, 25);
             labelUsuario.TabIndex = 6;
-            labelUsuario.Text = "Menu Usuario";
+            labelUsuario.Text = "Pesquisar";
             // 
             // btnSairMenuUsuario
             // 
@@ -77,32 +86,16 @@
             // dataGridViewUsuarios
             // 
             dataGridViewUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUsuarios.Location = new Point(42, 130);
+            dataGridViewUsuarios.Location = new Point(6, 71);
             dataGridViewUsuarios.Name = "dataGridViewUsuarios";
             dataGridViewUsuarios.RowHeadersWidth = 62;
-            dataGridViewUsuarios.Size = new Size(717, 253);
+            dataGridViewUsuarios.Size = new Size(739, 253);
             dataGridViewUsuarios.TabIndex = 8;
-            // 
-            // textBoxUsuarioPesquisar
-            // 
-            textBoxUsuarioPesquisar.Location = new Point(199, 79);
-            textBoxUsuarioPesquisar.Name = "textBoxUsuarioPesquisar";
-            textBoxUsuarioPesquisar.Size = new Size(560, 31);
-            textBoxUsuarioPesquisar.TabIndex = 9;
-            // 
-            // labelPesquisarUsuario
-            // 
-            labelPesquisarUsuario.AutoSize = true;
-            labelPesquisarUsuario.Location = new Point(42, 79);
-            labelPesquisarUsuario.Name = "labelPesquisarUsuario";
-            labelPesquisarUsuario.Size = new Size(151, 25);
-            labelPesquisarUsuario.TabIndex = 10;
-            labelPesquisarUsuario.Text = "Pesquisar Usuario";
             // 
             // btnExcluir
             // 
             btnExcluir.BackColor = Color.FromArgb(255, 128, 128);
-            btnExcluir.Location = new Point(647, 404);
+            btnExcluir.Location = new Point(663, 404);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(112, 34);
             btnExcluir.TabIndex = 11;
@@ -112,7 +105,7 @@
             // btnEditar
             // 
             btnEditar.BackColor = Color.MediumAquamarine;
-            btnEditar.Location = new Point(529, 404);
+            btnEditar.Location = new Point(545, 404);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(112, 34);
             btnEditar.TabIndex = 12;
@@ -122,24 +115,33 @@
             // btnAdicionar
             // 
             btnAdicionar.BackColor = Color.FromArgb(255, 255, 128);
-            btnAdicionar.Location = new Point(411, 404);
+            btnAdicionar.Location = new Point(6, 31);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(112, 34);
             btnAdicionar.TabIndex = 13;
             btnAdicionar.Text = "+ Adicionar";
             btnAdicionar.UseVisualStyleBackColor = false;
+            btnAdicionar.Click += btnAdicionar_Click;
+            // 
+            // groupBoxUsuario
+            // 
+            groupBoxUsuario.Controls.Add(btnAdicionar);
+            groupBoxUsuario.Controls.Add(dataGridViewUsuarios);
+            groupBoxUsuario.Location = new Point(14, 54);
+            groupBoxUsuario.Name = "groupBoxUsuario";
+            groupBoxUsuario.Size = new Size(761, 344);
+            groupBoxUsuario.TabIndex = 14;
+            groupBoxUsuario.TabStop = false;
+            groupBoxUsuario.Text = "Usuario";
             // 
             // FrmUsuarios
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnAdicionar);
+            Controls.Add(groupBoxUsuario);
             Controls.Add(btnEditar);
             Controls.Add(btnExcluir);
-            Controls.Add(labelPesquisarUsuario);
-            Controls.Add(textBoxUsuarioPesquisar);
-            Controls.Add(dataGridViewUsuarios);
             Controls.Add(panelUsuario);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmUsuarios";
@@ -147,8 +149,8 @@
             panelUsuario.ResumeLayout(false);
             panelUsuario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).EndInit();
+            groupBoxUsuario.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -158,9 +160,9 @@
         private Button btnSairMenuUsuario;
         private DataGridView dataGridViewUsuarios;
         private TextBox textBoxUsuarioPesquisar;
-        private Label labelPesquisarUsuario;
         private Button btnExcluir;
         private Button btnEditar;
         private Button btnAdicionar;
+        private GroupBox groupBoxUsuario;
     }
 }

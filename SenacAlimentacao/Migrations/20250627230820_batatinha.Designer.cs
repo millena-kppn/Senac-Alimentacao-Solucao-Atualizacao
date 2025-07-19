@@ -10,7 +10,7 @@ using SenacAlimentacao;
 
 namespace SenacAlimentacao.Migrations
 {
-    [DbContext(typeof(ComandaDBContext))]
+    [DbContext(typeof(UsuarioDBContext))]
     [Migration("20250627230820_batatinha")]
     partial class batatinha
     {

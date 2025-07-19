@@ -57,8 +57,8 @@ namespace SenacAlimentacao
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            var frmUsuario = new FrmUsuario();
-            frmUsuario.ShowDialog();
+            var FrmUsuarios = new FrmUsuarios();
+            FrmUsuarios.ShowDialog();
         }
 
         private void btnMesa_Click(object sender, EventArgs e)

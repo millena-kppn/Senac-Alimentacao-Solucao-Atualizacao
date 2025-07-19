@@ -16,5 +16,10 @@ namespace SenacAlimentacao
         {
             InitializeComponent();
         }
+
+        private void btnSairMenuUsuarioCAD_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

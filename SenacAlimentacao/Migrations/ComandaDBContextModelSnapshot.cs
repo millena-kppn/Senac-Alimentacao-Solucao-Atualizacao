@@ -9,7 +9,7 @@ using SenacAlimentacao;
 
 namespace SenacAlimentacao.Migrations
 {
-    [DbContext(typeof(ComandaDBContext))]
+    [DbContext(typeof(UsuarioDBContext))]
     partial class ComandaDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
