@@ -91,6 +91,7 @@
             dataGridViewUsuarios.RowHeadersWidth = 62;
             dataGridViewUsuarios.Size = new Size(739, 253);
             dataGridViewUsuarios.TabIndex = 8;
+            dataGridViewUsuarios.CellContentClick += dataGridViewUsuarios_CellContentClick;
             // 
             // btnExcluir
             // 

@@ -1,4 +1,5 @@
-﻿namespace SenacAlimentacao
+﻿
+namespace SenacAlimentacao
 {
     partial class FrmUsuariosCAD
     {
@@ -43,6 +44,7 @@
             labelPerfil = new Label();
             btnSalvar = new Button();
             btnCancelar = new Button();
+            btnLimparCampos = new Button();
             panelUsuarioCAD.SuspendLayout();
             SuspendLayout();
             // 
@@ -181,11 +183,23 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
             // 
+            // btnLimparCampos
+            // 
+            btnLimparCampos.BackColor = Color.SteelBlue;
+            btnLimparCampos.Location = new Point(373, 404);
+            btnLimparCampos.Name = "btnLimparCampos";
+            btnLimparCampos.Size = new Size(145, 34);
+            btnLimparCampos.TabIndex = 21;
+            btnLimparCampos.Text = "Limpar Campos";
+            btnLimparCampos.UseVisualStyleBackColor = false;
+
+            // 
             // FrmUsuariosCAD
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnLimparCampos);
             Controls.Add(btnCancelar);
             Controls.Add(btnSalvar);
             Controls.Add(labelPerfil);
@@ -208,6 +222,11 @@
             PerformLayout();
         }
 
+        private void btnSairMenuUsuarioCAD_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         #endregion
 
         private Panel panelUsuarioCAD;
@@ -225,5 +244,6 @@
         private Label labelPerfil;
         private Button btnSalvar;
         private Button btnCancelar;
+        private Button btnLimparCampos;
     }
 }
