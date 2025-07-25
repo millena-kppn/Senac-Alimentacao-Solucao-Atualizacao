@@ -39,6 +39,7 @@
             panel1 = new Panel();
             groupBoxCardapio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBoxCardapio
@@ -47,9 +48,9 @@
             groupBoxCardapio.Controls.Add(btnEditar);
             groupBoxCardapio.Controls.Add(btnExcluir);
             groupBoxCardapio.Controls.Add(dataGridView1);
-            groupBoxCardapio.Location = new Point(12, 48);
+            groupBoxCardapio.Location = new Point(12, 55);
             groupBoxCardapio.Name = "groupBoxCardapio";
-            groupBoxCardapio.Size = new Size(776, 390);
+            groupBoxCardapio.Size = new Size(776, 383);
             groupBoxCardapio.TabIndex = 0;
             groupBoxCardapio.TabStop = false;
             groupBoxCardapio.Text = "Cardapio";
@@ -110,7 +111,7 @@
             // 
             // caixaTxtPesquisar
             // 
-            caixaTxtPesquisar.Location = new Point(104, 6);
+            caixaTxtPesquisar.Location = new Point(104, 12);
             caixaTxtPesquisar.Name = "caixaTxtPesquisar";
             caixaTxtPesquisar.Size = new Size(642, 31);
             caixaTxtPesquisar.TabIndex = 4;
@@ -131,9 +132,10 @@
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(caixaTxtPesquisar);
             panel1.Location = new Point(0, -5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(802, 47);
+            panel1.Size = new Size(802, 54);
             panel1.TabIndex = 4;
             // 
             // FrmCardapio
@@ -142,7 +144,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnSair);
-            Controls.Add(caixaTxtPesquisar);
             Controls.Add(labelPesquisar);
             Controls.Add(groupBoxCardapio);
             Controls.Add(panel1);
@@ -152,6 +153,8 @@
             Load += FrmCardapio_Load;
             groupBoxCardapio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }

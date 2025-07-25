@@ -3,13 +3,11 @@ namespace SenacAlimentacao
 {
     public partial class FrmUsuarios : Form
     {
-        Usuario? UsuarioSelecionado;
+        Usuario? UsuarioSelecionado;// variável para armazenar o usuário selecionado
         public FrmUsuarios()
         {
-            InitializeComponent();
+            InitializeComponent();// inicializa os componentes do formulário
         }
-
-
         private void textBoxUsuarioPesquisar_Click(object sender, EventArgs e)
         {
             BuscarUsuarios(); //chama o método de busca com o texto digitado
@@ -149,13 +147,5 @@ namespace SenacAlimentacao
     }
     public class UsuarioSelecionado {
         public Usuario Usuario { get; set; } // Propriedade para armazenar o usuário selecionado
-    }
-    public class ComandaDBContext : DbContext
-    {
-        public DbSet<Usuario> Usuarios { get; set; } // Conjunto de usuários no banco de dados
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("sua_string_de_conexao"); // Configuração da conexão com o banco de dados
-        }
     }
 }
